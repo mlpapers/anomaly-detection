@@ -17,7 +17,7 @@
 ## Support and robust distribution models
 
 - **One-class SVM** - Learns a function separating an estimated support region from its complement using kernels. Kernel and regularization choices define the boundary; it is not a labeled anomaly classifier. [Schölkopf et al. 2001](<https://research.google/pubs/estimating-the-support-of-a-high-dimensional-distribution/> "Estimating the Support of a High-Dimensional Distribution; Neural Comput.").
-- **Robust covariance** - Minimum covariance determinant / EllipticEnvelope fit a robust location and covariance for distance-based detection. Useful when an approximately elliptical normal population is plausible; multimodal structure needs other models. [docs](<https://scikit-learn.org/stable/modules/outlier_detection.html>).
+- **Robust covariance** - Minimum covariance determinant / EllipticEnvelope fit a robust location and covariance for distance-based detection. Useful when an approximately elliptical normal population is plausible; multimodal structure needs other models. [Rousseeuw and Van Driessen 1999](<https://wis.kuleuven.be/stat/robust/papers/1999/rousseeuwvandriessen-fastalgorithmformcd-technomet.pdf> "A Fast Algorithm for the Minimum Covariance Determinant Estimator; Technometrics"); [docs](<https://scikit-learn.org/stable/modules/outlier_detection.html>).
 
 ## Learned one-class and reconstruction methods
 
@@ -56,7 +56,7 @@
 - **Dataset artifacts** - Wu and Keogh identify labeling and construction flaws in widely used time-series benchmarks and introduce the UCR anomaly archive. Their criticism concerns examined datasets; it does not invalidate all temporal detection. [Wu and Keogh 2021](<https://arxiv.org/abs/2009.13807> "Current Time Series Anomaly Detection Benchmarks are Flawed and are Creating the Illusion of Progress; TKDE").
 - **MVTec AD 2** - Adds eight industrial scenarios, including small defects and lighting changes. Heckler-Kram et al. report tested methods below 60% average AU-PRO; earlier near-saturated benchmarks conceal these difficulties. [Heckler-Kram et al. 2026](<https://arxiv.org/abs/2503.21622> "The MVTec AD 2 Dataset: Advanced Scenarios for Unsupervised Anomaly Detection; IJCV").
 - **Rare-event metrics** - Report class prevalence, precision-recall performance and false alarms at a threshold chosen without test labels. High ROC-AUC alone does not specify an acceptable operational alert rate. [Davis and Goadrich 2006](<https://ftp.cs.wisc.edu/machine-learning/shavlik-group/davis.icml06.pdf> "The relationship between Precision-Recall and ROC curves; ICML").
-- **Temporal evaluation protocol** - Separate point detection, event detection and delay; keep device/time splits intact and state whether future samples are available. Evaluation critique motivates reporting the rule that turns scores into credited events. [Kim et al. 2021](<https://arxiv.org/abs/2109.05257> "Towards a Rigorous Evaluation of Time-series Anomaly Detection; arXiv").
+- **Temporal evaluation protocol (editorial guidance)** - Separate point detection, event detection and delay; keep device/time splits intact and state whether future samples are available. Evaluation critique motivates reporting the rule that turns scores into credited events. [Kim et al. 2021](<https://arxiv.org/abs/2109.05257> "Towards a Rigorous Evaluation of Time-series Anomaly Detection; arXiv").
 
 <a id="software-and-surveys"></a>
 
